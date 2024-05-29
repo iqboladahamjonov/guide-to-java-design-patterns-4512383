@@ -1,10 +1,15 @@
 package com.example;
 
-public class FrenchLocalizedMessageAdapter extends FrenchLocalizedMessage implements LocalizedMessage {
+public class FrenchLocalizedMessageAdapter implements LocalizedMessage {
+
+  private final FrenchLocalizedMessage frenchLocalizedMessage;
+
+  public FrenchLocalizedMessageAdapter() {
+    this.frenchLocalizedMessage = new FrenchLocalizedMessage();
+  }
 
   @Override
   public void sayHello() {
-    sayBonjour();
+    frenchLocalizedMessage.sayBonjour();
   }
-  
 }
